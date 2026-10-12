@@ -1,5 +1,0 @@
-flask
-flask-cors
-anthropic
-pillow
-gunicorn
