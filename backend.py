@@ -12,7 +12,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Initialize the Anthropic Client
-client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
+print ("KEY SET STATUS:",bool(os.environ.get("ANTHROPIC_API_KEY")))
+client = Anthropic()
 
 # Path to your authentic reference receipt image (Absolute Path)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
