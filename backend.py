@@ -16,7 +16,7 @@ client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 # Path to your authentic reference receipt image (Absolute Path)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-REFERENCE_IMAGE_PATH = os.path.join(BASE_DIR, "real_reference.jpg")
+REFERENCE_IMAGE_PATH = os.path.join(BASE_DIR, "Real_reference.jpg.jpeg")
 
 
 def encode_image_to_base64(image):
