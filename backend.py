@@ -11,12 +11,12 @@ app = Flask(__name__)
 # Enable CORS for cross-origin requests from the Lovable frontend
 CORS(app)
 
-
 # Initialize the Anthropic Client
 client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
-# Path to your authentic reference receipt image
-REFERENCE_IMAGE_PATH = "real_reference.jpg"
+# Path to your authentic reference receipt image (Absolute Path)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+REFERENCE_IMAGE_PATH = os.path.join(BASE_DIR, "real_reference.jpg")
 
 
 def encode_image_to_base64(image):
